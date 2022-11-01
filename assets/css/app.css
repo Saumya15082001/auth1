@@ -1,0 +1,244 @@
+/* This file is for your main application CSS */
+@import "./phoenix.css";
+
+/* Alerts and form errors used by phx.new */
+.splitl {
+  position: absolute;
+  width: 216px;
+  height: 720px;
+  top: 0px;
+   left: 1px;
+ background: #3F51B5;
+
+}
+.splitr {
+  position: absolute;
+  width: 583px;
+  height: 720px;
+  top: 0px;
+  right: 1px;
+  background: #D9D9D9;
+}
+.diagonal-boxu {
+  position: absolute;
+  width: 100px;
+height: 556.13px;
+left: 160.89px;
+top: -206.84px;
+
+background: #C5CAE9;
+
+transform: rotate(48.56deg);
+}
+.diagonal-boxd {
+  position: absolute;
+width: 124.33px;
+height: 621.74px;
+left: 87.83px;
+top: 197.65px;
+
+/* Secondary color */
+
+background: #C5CAE9;
+box-shadow: 0px 0px 0px #000000;
+transform: rotate(-36.18deg);
+}
+
+
+.con {
+  position: absolute;
+width: 80px;
+height: 40px;
+left: 139px;
+top: 313px;
+
+background: #FFFFFF;
+border-radius: 52px 0px 0px 52px;
+  
+}
+  
+.con2 {
+  position: absolute;
+width: 63px;
+height: 29px;
+left: 325px;
+top: 253px;
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 29px;
+color: #FFFFFF;
+}
+
+.signup
+{
+  position: absolute;
+  width: 85px;
+  height: 29px;
+  top: 7px;
+  left: 11px;
+  font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 15px;
+line-height: 29px;
+}
+
+.heading {
+  position: absolute;
+width: 231px;
+height: 29px;
+left: 317px;
+top: 108px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 29px;
+/* identical to box height */
+
+
+color: #000000;
+}
+
+.h2{
+  position: absolute;
+width: 168px;
+height: 17px;
+left: 341px;
+top: 142px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 17px;
+/* identical to box height */
+
+text-align: center;
+
+/* Secondary text */
+
+color: rgba(0, 0, 0, 0.6);
+}
+
+
+
+.alert {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+.alert-info {
+  color: #31708f;
+  background-color: #d9edf7;
+  border-color: #bce8f1;
+}
+.alert-warning {
+  color: #8a6d3b;
+  background-color: #fcf8e3;
+  border-color: #faebcc;
+}
+.alert-danger {
+  color: #a94442;
+  background-color: #f2dede;
+  border-color: #ebccd1;
+}
+.alert p {
+  margin-bottom: 0;
+}
+.alert:empty {
+  display: none;
+}
+.invalid-feedback {
+  color: #a94442;
+  display: block;
+  margin: -1rem 0 2rem;
+}
+
+/* LiveView specific classes for your customization */
+.phx-no-feedback.invalid-feedback,
+.phx-no-feedback .invalid-feedback {
+  display: none;
+}
+
+.phx-click-loading {
+  opacity: 0.5;
+  transition: opacity 1s ease-out;
+}
+
+.phx-loading{
+  cursor: wait;
+}
+
+.phx-modal {
+  opacity: 1!important;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+}
+
+.phx-modal-content {
+  background-color: #fefefe;
+  margin: 15vh auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.phx-modal-close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.phx-modal-close:hover,
+.phx-modal-close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.fade-in-scale {
+  animation: 0.2s ease-in 0s normal forwards 1 fade-in-scale-keys;
+}
+
+.fade-out-scale {
+  animation: 0.2s ease-out 0s normal forwards 1 fade-out-scale-keys;
+}
+
+.fade-in {
+  animation: 0.2s ease-out 0s normal forwards 1 fade-in-keys;
+}
+.fade-out {
+  animation: 0.2s ease-out 0s normal forwards 1 fade-out-keys;
+}
+
+@keyframes fade-in-scale-keys{
+  0% { scale: 0.95; opacity: 0; }
+  100% { scale: 1.0; opacity: 1; }
+}
+
+@keyframes fade-out-scale-keys{
+  0% { scale: 1.0; opacity: 1; }
+  100% { scale: 0.95; opacity: 0; }
+}
+
+@keyframes fade-in-keys{
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes fade-out-keys{
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
