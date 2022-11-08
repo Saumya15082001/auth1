@@ -1,3 +1,4 @@
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,12 +12,18 @@
    <div class="con">
      <div class="signup">Sign Up</div>
    </div>
-   <div class="con2">Login</div>
+   <div class="con2">
+   <%=  link "Login", to: Routes.user_session_path(@conn, :new) %>
+   </div>
 </div>
   
   <div class="splitr">
   	<div class="heading">Create new account</div> <br/><br/><br/><br/>
     <div class= "h2">Already A Member? Log In</div> <br/>
+    <br/>
+    <br/>
+    <br/>
+    
     <div class="container">
     	<.form let={f} for={@changeset} action={Routes.user_registration_path(@conn, :create)}>
         <%= if @changeset.action do %>
@@ -24,18 +31,17 @@
               <p>Oops, something went wrong! Please check the errors below.</p>
           </div>
         <% end %>
-        <%= label f, :name %>
-        <%= text_input f, :name, required: true , placeholder: "First Name"%> <br>
-        <%= label f, :email %>
+        
+        <%= text_input f, :name, required: true , placeholder: "Name"%> <br>
         <%= email_input f, :email, required: true , placeholder: "Example@gmail.com"%> 
         <%= error_tag f, :email %> <br>
-        <%= label f, :password %>
-        <%= password_input f, :password, required: true %>
+        
+        <%= password_input f, :password, placeholder: "Password" ,required: true %>
         <%= error_tag f, :password %><br>
-        <%= label f, :confirmpassword %>
-        <%= password_input f, :confirmpassword, required: true %>
+       
+        <%= password_input f, :confirmpassword, placeholder: "Confirm Password", required: true %>
         <%= error_tag f, :confirmpassword %><br>
-        <div>
+        <div class="bt">
           <%= submit  "Create Account" %>
         </div>
     	</.form>
