@@ -3,7 +3,7 @@ import Config
 # Configure your database
 config :auth1, Auth1.Repo,
   username: "postgres",
-  password: "neetika07",
+  password: "1234",
   hostname: "localhost",
   database: "auth1_dev",
   stacktrace: true,

@@ -10,7 +10,7 @@ config :bcrypt_elixir, :log_rounds, 1
 # Run `mix help test` for more information.
 config :auth1, Auth1.Repo,
   username: "postgres",
-  password: "neetika07",
+  password: "1234",
   hostname: "localhost",
   database: "auth1_test#{System.get_env("MIX_TEST_PARTITION")}",
   pool: Ecto.Adapters.SQL.Sandbox,
