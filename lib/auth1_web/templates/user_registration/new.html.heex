@@ -24,21 +24,17 @@
               <p>Oops, something went wrong! Please check the errors below.</p>
           </div>
         <% end %>
-        <%= label f, :firstname %>
-        <%= text_input f, :firstname, required: true , placeholder: "First Name"%> <br>
-        <%= label f, :lastname %>
-        <%= text_input f, :lastname, required: true , placeholder: "Last Name"%> <br>
+        <%= label f, :name %>
+        <%= text_input f, :name, required: true , placeholder: "First Name"%> <br>
         <%= label f, :email %>
         <%= email_input f, :email, required: true , placeholder: "Example@gmail.com"%> 
         <%= error_tag f, :email %> <br>
-        <%= label f, :username %>
-        <%= text_input f, :username, required: true , placeholder: "Username"%> <br>
         <%= label f, :password %>
         <%= password_input f, :password, required: true %>
         <%= error_tag f, :password %><br>
         <%= label f, :confirmpassword %>
         <%= password_input f, :confirmpassword, required: true %>
-        <%= error_tag f, :password %><br>
+        <%= error_tag f, :confirmpassword %><br>
         <div>
           <%= submit  "Create Account" %>
         </div>
@@ -52,6 +48,3 @@
 </p>
 
 </body>
-
-
-

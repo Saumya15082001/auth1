@@ -5,6 +5,7 @@ defmodule Auth1.Repo.Migrations.CreateUsers1AuthTables do
     execute "CREATE EXTENSION IF NOT EXISTS citext", ""
 
     create table(:users1) do
+      add :name, null:false
       add :email, :citext, null: false
       add :hashed_password, :string, null: false
       add :confirmed_at, :naive_datetime
